@@ -1,5 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { FileText, BarChart, User, Mail, Settings } from 'lucide-react';
+import { TabLink } from '@/components/TabLink';
 
 const features = [
   {
@@ -67,6 +68,24 @@ export default function Home() {
             <li>• Mỗi trang sẽ được mở trong một tab riêng</li>
             <li>• Chuyển qua lại giữa các tab - trạng thái sẽ được giữ nguyên</li>
             <li>• Click vào dấu X để đóng tab và xóa cache của trang đó</li>
+            <li>
+              • Bạn cũng có thể dùng TabLink để mở tab: {' '}
+              <TabLink 
+                to="/counter" 
+                tabTitle="Counter" 
+                className="text-primary hover:underline font-medium"
+              >
+                Thử Counter
+              </TabLink>
+              {' hoặc '}
+              <TabLink 
+                to="/form" 
+                tabTitle="Form Demo" 
+                className="text-primary hover:underline font-medium"
+              >
+                Form Demo
+              </TabLink>
+            </li>
           </ul>
         </CardContent>
       </Card>
