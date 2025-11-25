@@ -57,6 +57,16 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        tab: {
+          DEFAULT: "hsl(var(--tab-background))",
+          hover: "hsl(var(--tab-hover))",
+          active: "hsl(var(--tab-active))",
+          "active-foreground": "hsl(var(--tab-active-foreground))",
+          border: "hsl(var(--tab-border))",
+        },
+      },
+      transitionProperty: {
+        smooth: "var(--transition-smooth)",
       },
       borderRadius: {
         lg: "var(--radius)",
