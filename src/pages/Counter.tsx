@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Plus, Minus, RotateCcw } from 'lucide-react';
+import { Plus, Minus, RotateCcw, ArrowRight } from 'lucide-react';
+import { TabLink } from '@/components/TabLink';
 
 export default function Counter() {
   const [count, setCount] = useState(0);
@@ -61,10 +62,26 @@ export default function Counter() {
 
       <Card className="mt-6 bg-accent/10 border-accent/20">
         <CardContent className="pt-6">
-          <p className="text-sm text-muted-foreground">
+          <p className="text-sm text-muted-foreground mb-4">
             <strong>Test keep-alive:</strong> Tăng số đếm lên một vài lần, sau đó chuyển sang 
             tab khác. Khi quay lại, số đếm sẽ vẫn giữ nguyên giá trị!
           </p>
+          <div className="flex gap-2">
+            <TabLink 
+              to="/form" 
+              tabTitle="Form Demo"
+              className="inline-flex items-center gap-2 text-sm text-primary hover:underline"
+            >
+              Thử Form <ArrowRight className="h-4 w-4" />
+            </TabLink>
+            <TabLink 
+              to="/messages" 
+              tabTitle="Tin nhắn"
+              className="inline-flex items-center gap-2 text-sm text-primary hover:underline"
+            >
+              Xem Messages <ArrowRight className="h-4 w-4" />
+            </TabLink>
+          </div>
         </CardContent>
       </Card>
     </div>

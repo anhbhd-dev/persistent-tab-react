@@ -4,6 +4,8 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
+import { TabLink } from '@/components/TabLink';
+import { ArrowRight } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 export default function FormDemo() {
@@ -79,10 +81,26 @@ export default function FormDemo() {
 
       <Card className="mt-6 bg-accent/10 border-accent/20">
         <CardContent className="pt-6">
-          <p className="text-sm text-muted-foreground">
+          <p className="text-sm text-muted-foreground mb-4">
             <strong>Test keep-alive:</strong> Nhập một số dữ liệu vào form, sau đó chuyển sang 
             tab Counter hoặc tab khác. Khi quay lại tab này, bạn sẽ thấy dữ liệu vẫn còn nguyên!
           </p>
+          <div className="flex gap-3">
+            <TabLink 
+              to="/counter" 
+              tabTitle="Counter"
+              className="inline-flex items-center gap-2 text-sm text-primary hover:underline font-medium"
+            >
+              Thử Counter <ArrowRight className="h-4 w-4" />
+            </TabLink>
+            <TabLink 
+              to="/profile" 
+              tabTitle="Hồ sơ"
+              className="inline-flex items-center gap-2 text-sm text-primary hover:underline font-medium"
+            >
+              Xem Profile <ArrowRight className="h-4 w-4" />
+            </TabLink>
+          </div>
         </CardContent>
       </Card>
     </div>
